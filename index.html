@@ -3,45 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Più Grande Catalogo di Corsi in Italia</title>
+    <title>Catalogo Corsi</title>
     <style>
         body { font-family: 'Inter', -apple-system, sans-serif; background: #f8fafc; color: #1e293b; margin: 0; }
         .hero { background: #fff; padding: 60px 20px; text-align: center; border-bottom: 1px solid #e2e8f0; }
         h1 { font-size: 2.8rem; font-weight: 900; color: #0f172a; letter-spacing: -1.5px; margin: 0; }
-        .sub { font-size: 1.2rem; color: #64748b; margin: 10px 0 30px; }
-        .search-container { max-width: 600px; margin: 0 auto 30px; }
-        .search-box { width: 100%; padding: 18px 25px; border-radius: 12px; border: 2px solid #e2e8f0; font-size: 1.1rem; outline: none; transition: 0.2s; box-sizing: border-box; }
-        .search-box:focus { border-color: #3b82f6; box-shadow: 0 0 0 4px rgba(59,130,246,0.1); }
-        
-        .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 40px; transition: opacity 0.3s, max-height 0.3s; overflow: hidden; opacity: 1; max-height: 500px; }
-        .filters.hidden { opacity: 0; max-height: 0; margin-bottom: 0; pointer-events: none; }
-        
-        .filter-btn { background: #fff; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-weight: 600; color: #475569; }
-        .filter-btn.active { background: #0f172a; color: #fff; border-color: #0f172a; }
-        .container { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .course-card { background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; transition: 0.3s; }
-        .course-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+        .search-container { max-width: 600px; margin: 20px auto; }
+        .search-box { width: 100%; padding: 15px; border-radius: 12px; border: 2px solid #e2e8f0; }
+        .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 40px; }
+        .filter-btn { background: #fff; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; cursor: pointer; }
+        .filter-btn.active { background: #0f172a; color: #fff; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .course-card { background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; }
         .card-img { height: 160px; background: #f1f5f9; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .category-tag { font-size: 0.7rem; font-weight: 800; color: #3b82f6; text-transform: uppercase; margin-bottom: 8px; }
-        .card-title { font-size: 1.25rem; margin: 0 0 10px; line-height: 1.3; }
-        .card-title a { color: inherit; text-decoration: none; }
-        .card-text { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; flex-grow: 1; }
-        
-        .card-link { font-weight: 800; color: #3b82f6; text-decoration: none; transition: 0.2s; display: inline-block; }
-        .course-card:hover .card-link { transform: translateX(5px); color: #2563eb; }
-        
-        #noResults { display: none; text-align: center; padding: 40px; color: #94a3b8; font-size: 1.2rem; }
+        .card-body { padding: 20px; }
+        .category-tag { font-size: 0.7rem; color: #3b82f6; text-transform: uppercase; }
+        .card-link { font-weight: bold; color: #3b82f6; text-decoration: none; }
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>Il Più Grande Catalogo di Corsi in Italia</h1>
-        <p class="sub">Trova e scarica i programmi completi dei migliori percorsi formativi.</p>
+        <h1>Catalogo Corsi Aggiornato</h1>
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-box" placeholder="Cerca un corso o un autore (es. Big Luca)...">
+            <input type="text" id="searchInput" class="search-box" placeholder="Cerca un corso...">
         </div>
         <div id="filterContainer" class="filters"><button class="filter-btn active" data-filter="all">Tutti i Corsi</button>
 <button class="filter-btn" data-filter="affiliate-marketing">Affiliate Marketing</button>
@@ -152,8 +138,38 @@
 <button class="filter-btn" data-filter="wordpress">Wordpress</button>
 <button class="filter-btn" data-filter="youtube">Youtube</button></div>
     </div>
-    <div class="container">
-        <div id="grid" class="grid">
+    <div class="grid" id="grid">
+    <div class="course-card" data-search="basi d’acciaio – scuola ciclismo canguri sport basi d’acciaio – scuola ciclismo canguri
+domina la tua mtb con il metodo basi d’acciaio. questo corso tecnico ti guida passo dopo passo verso un controllo totale del mezzo, trasformando la tua sicurezza sui sentieri.
+cosa troverai all’interno:
+
+
+assetto perfetto: settaggio professionale di sospensioni, sella e comandi.
+
+
+tecnica di frenata: impara la modulazione anteriore/posteriore per fermarti ovunque.
+
+
+gestione cambio: padronanza della cadenza in salita e sui tratti tecnici.
+
+
+controllo dinamico: mobilità in sella, gestione dei pedali flat e superamento ostacoli.
+
+
+sicurezza: manovre di emergenza, equilibrio e mobilità verticale/laterale.
+
+
+dalla teoria dell’apprendimento alla pratica sui trail, basi d’acciaio è il manuale tecnico completo per smettere di subire il terreno e iniziare finalmente a guidare.
+sblocca ora il tuo potenziale e costruisci le tue fondamenta d’acciaio!" data-categories="sport">
+        <div class="card-img"><img src="https://bitcorsi.com/wp-content/uploads/2026/05/Basi-dAcciaio-Scuola-Ciclismo-Canguri.jpg" alt="Basi d’Acciaio – Scuola Ciclismo Canguri" loading="lazy"></div>
+        <div class="card-body">
+            <span class="category-tag">Sport</span>
+            <h2 class="card-title"><a href="basi-dacciaio-scuola-ciclismo-canguri.html">Basi d’Acciaio – Scuola Ciclismo Canguri</a></h2>
+            <p class="card-text">Basi d’Acciaio – Scuola Ciclismo Canguri
+Domina la tua MTB con il metodo Basi d’Acciaio. Questo corso tecnico ti guida passo dopo passo vers...</p>
+            <a href="basi-dacciaio-scuola-ciclismo-canguri.html" class="card-link">📥 Scarica il Corso &rarr;</a>
+        </div>
+    </div>
     <div class="course-card" data-search="accessibilità web pro – andrea marchetti informatica software impara a creare siti web accessibili, evita problemi legali e resta aggiornato sui nuovi standard digitali senza dover rifare da zero i tuoi progetti.
 l’accessibilità web sta diventando uno dei requisiti più importanti per aziende, professionisti e sviluppatori che vogliono realizzare siti moderni, professionali e conformi alle normative europee.
 
@@ -272,14 +288,25 @@ Impara a realizzare contenuti coinvolgenti grazie a AI ...</p>
             <a href="ai-motion-gabriele-venturini.html" class="card-link">📥 Scarica il Corso &rarr;</a>
         </div>
     </div>
-    <div class="course-card" data-search="online marketing per mentecatti 4.0 – big luca marketing una masterclass avanzata per sviluppatori e team tecnici che vogliono costruire soluzioni ai reali, scalabili e personalizzate, non semplici prototipi.
-passa dalla teoria al codice, progettando e implementando llm custom, sistemi rag, agenti ai e architetture multi-agente pronte per la produzione.
-un percorso tecnico e concreto per chi vuole mettere le mani sul codice e costruire sistemi ai reali, scalabili e intelligenti. dal finetuning dei modelli linguistici ai sistemi multi-agente, fino alla creazione completa di un’applicazione ai autonoma." data-categories="marketing">
+    <div class="course-card" data-search="online marketing per mentecatti 4.0 – big luca marketing mentecatti 4.0 non è il classico corso di marketing.
+è un percorso formativo pensato per chi vuole costruire un business online moderno, sviluppare competenze imprenditoriali e creare nuove opportunità nel digitale.
+dal 2018, il metodo mentecatti ha aiutato migliaia di persone ad avvicinarsi al mondo dell’imprenditoria online, del marketing digitale e della crescita personale applicata al business.
+mentecatti 4.0 rappresenta l’evoluzione aggiornata al 2026, con strategie moderne, strumenti attuali e un approccio orientato ai risultati concreti.
+all’interno del percorso troverai:
+
+10 lezioni complete registrate personalmente dal creator del corso
+oltre 9 ore di formazione pratica
+strategie di marketing digitale e business online aggiornate
+approcci pratici per sviluppare un mindset imprenditoriale
+metodi applicabili fin da subito per creare nuove opportunità online
+
+mentecatti 4.0 è pensato per chi vuole imparare a muoversi nel mondo digitale con maggiore consapevolezza, strategia e visione imprenditoriale." data-categories="marketing">
         <div class="card-img"><img src="https://bitcorsi.com/wp-content/uploads/2026/05/Online-Marketing-per-Mentecatti-4.0-–-Big-Luca.jpg" alt="Online Marketing per Mentecatti 4.0 – Big Luca" loading="lazy"></div>
         <div class="card-body">
             <span class="category-tag">Marketing</span>
             <h2 class="card-title"><a href="online-marketing-per-mentecatti-40-big-luca.html">Online Marketing per Mentecatti 4.0 – Big Luca</a></h2>
-            <p class="card-text">Una masterclass avanzata per sviluppatori e team tecnici che vogliono costruire soluzioni AI reali, scalabili e personalizzate, non semplici...</p>
+            <p class="card-text">Mentecatti 4.0 non è il classico corso di marketing.
+È un percorso formativo pensato per chi vuole costruire un business online moderno, svi...</p>
             <a href="online-marketing-per-mentecatti-40-big-luca.html" class="card-link">📥 Scarica il Corso &rarr;</a>
         </div>
     </div>
@@ -51891,75 +51918,29 @@ tutti i consigli operativi, direttamente dalla mia esperienza di vita vissuta, 
             <a href="project-management-il-corso-fondamentale-cristiano-ottavian-corsiit.html" class="card-link">📥 Scarica il Corso &rarr;</a>
         </div>
     </div></div>
-        <div id="noResults">Nessun corso trovato. Prova un'altra ricerca.</div>
-    </div>
-    
     <script>
         const searchInput = document.getElementById('searchInput');
-        const filterContainer = document.getElementById('filterContainer');
         const cards = Array.from(document.querySelectorAll('.course-card'));
         const btns = document.querySelectorAll('.filter-btn');
-        
         let currentFilter = 'all';
-        let itemsToShow = 24;  // Numero di corsi iniziali renderizzati a schermo
-        const increment = 24;   // Numero di corsi caricati ad ogni scroll verso il basso
 
         function filter() {
-            const val = searchInput.value.toLowerCase().trim();
-            
-            // Nasconde i bottoni categoria se l'utente digita del testo
-            if (val.length > 0) {
-                filterContainer.classList.add('hidden');
-            } else {
-                filterContainer.classList.remove('hidden');
-            }
-
-            let visibleCount = 0;
+            const val = searchInput.value.toLowerCase();
             cards.forEach(card => {
                 const text = card.getAttribute('data-search');
                 const cats = card.getAttribute('data-categories').split(' ');
                 const match = text.includes(val) && (currentFilter === 'all' || cats.includes(currentFilter));
-                
-                if (match) {
-                    // Logica Scroll Infinito: Mostra l'elemento solo se non supera la soglia corrente
-                    if (visibleCount < itemsToShow) {
-                        card.style.display = "flex";
-                    } else {
-                        card.style.display = "none";
-                    }
-                    visibleCount++;
-                } else {
-                    card.style.display = "none";
-                }
+                card.style.display = match ? "flex" : "none";
             });
-            
-            document.getElementById('noResults').style.display = visibleCount === 0 ? "block" : "none";
         }
 
-        // Rilevamento dello scroll per attivare l'Infinity Scroll
-        window.addEventListener('scroll', () => {
-            // Se l'utente arriva a 500px dal fondo della pagina, carica il blocco successivo di corsi
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                itemsToShow += increment;
-                filter();
-            }
-        });
-
-        searchInput.addEventListener('input', () => {
-            itemsToShow = 24; // Resetta la paginazione quando l'utente avvia una nuova ricerca
-            filter();
-        });
-
+        searchInput.addEventListener('input', filter);
         btns.forEach(b => b.addEventListener('click', () => {
             btns.forEach(x => x.classList.remove('active'));
             b.classList.add('active');
             currentFilter = b.getAttribute('data-filter');
-            itemsToShow = 24; // Resetta la paginazione quando l'utente cambia categoria
             filter();
         }));
-
-        // Esecuzione del filtro al primo caricamento della pagina
-        filter();
     </script>
 </body>
 </html>
